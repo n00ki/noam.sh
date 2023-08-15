@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	/* Reference name */
+	font-family: 'Rubik';
+	src: url('/fonts/Rubik-VariableFont.ttf'), url('/fonts/Rubik-Italic-VariableFont.ttf');
+}
