@@ -9,6 +9,7 @@
 	import Navbar from '$components/Navbar.svelte';
 	import { Toaster } from 'svelte-french-toast';
 	import ThemeSwitcher from '$components/ThemeSwitcher.svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	// Styles
 	import '../styles/app.css';
@@ -26,7 +27,9 @@
 	<Navbar />
 
 	<main class="container mx-auto flex flex-1 flex-col py-4">
-		<slot />
+		<PageTransition refresh={$page.url.pathname}>
+			<slot />
+		</PageTransition>
 
 		<div class="fixed bottom-5 right-0">
 			<ThemeSwitcher />

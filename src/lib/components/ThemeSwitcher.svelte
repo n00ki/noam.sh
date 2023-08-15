@@ -22,7 +22,7 @@
 			id="light-theme-switcher"
 			aria-label="Switch to light theme"
 			formaction="/?/set_theme&theme={themes.light}&redirect_to={$page.url.pathname}"
-			class="btn-ghost btn rounded-l-md rounded-r-none bg-base-200"
+			class="btn btn-ghost rounded-l-md rounded-r-none bg-base-200"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@
 			id="dark-theme-switcher"
 			aria-label="Switch to dark theme"
 			formaction="/?/set_theme&theme={themes.dark}&redirect_to={$page.url.pathname}"
-			class="btn-ghost btn rounded-l-md rounded-r-none bg-base-200"
+			class="btn btn-ghost rounded-l-md rounded-r-none bg-base-200"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
