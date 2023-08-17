@@ -56,6 +56,14 @@
 					>PROJECTS</a
 				>
 			</li>
+			<li>
+				<a
+					href="https://noams.blog"
+					target="_blank"
+					class="btn btn-ghost btn-sm w-full"
+					on:click={toggle_menu_state}>BLOG</a
+				>
+			</li>
 		</ul>
 	{/if}
 </nav>

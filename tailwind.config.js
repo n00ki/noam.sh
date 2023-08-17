@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Rubik', 'sans-serif']
+				primary: ['Nunito', 'sans-serif']
 			}
 		}
 	},

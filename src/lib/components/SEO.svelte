@@ -2,9 +2,6 @@
 	// Env Variables
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
-	// Assets
-	import meta_image from '$lib/assets/meta.png';
-
 	export let title: string;
 	export let description: string;
 	export let image: string;
