@@ -38,6 +38,9 @@
 					<li>
 						<a href="/projects">PROJECTS</a>
 					</li>
+					<li>
+						<a href="https://noams.blog" target="_blank">BLOG</a>
+					</li>
 				</ul>
 			</div>
 		</div>
