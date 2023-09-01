@@ -13,7 +13,7 @@
 
 <div class="flex w-full flex-col-reverse px-2 lg:flex-row lg:justify-evenly 2xl:px-24">
 	<section class="flex flex-1 flex-col justify-center text-center">
-		<h1 class="pb-3 text-5xl font-extrabold sm:py-4 sm:text-5xl">Hi, I'm Noam! &#x1F44B</h1>
+		<h1 class="pb-3 text-4xl font-extrabold sm:py-4 sm:text-5xl">Hi, I'm Noam! &#x1F44B</h1>
 		<p class="text-md px-1 leading-7 sm:px-0 sm:leading-8 md:text-lg">
 			Music Producer, Web Developer & Life Enthusiast based in Israel.
 		</p>

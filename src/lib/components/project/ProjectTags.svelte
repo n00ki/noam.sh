@@ -6,13 +6,16 @@
 		switch (tag) {
 			case 'ruby':
 			case 'svelte':
+			case 'sveltekit':
 				return 'bg-red-400';
 			case 'rails':
+			case 'AI':
 				return 'bg-pink-400';
 			case 'javascript':
 			case 'sidekiq':
 			case 'ableton live':
 				return 'bg-yellow-400';
+			case 'typescript':
 			case 'stimulus':
 			case 'studio one':
 				return 'bg-blue-400';
@@ -20,8 +23,10 @@
 			case 'supabase':
 			case 'cloudinary':
 				return 'bg-green-400';
+			case 'MySQL':
 			case 'heroku':
 				return 'bg-indigo-400';
+			case 'PostgreSQL':
 			case 'figma':
 				return 'bg-purple-400';
 			default:
