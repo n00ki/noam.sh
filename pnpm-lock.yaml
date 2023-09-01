@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^2.33.0
     version: 2.33.0(eslint@8.48.0)(svelte@4.2.0)
   lucide-svelte:
-    specifier: ^0.274.0
-    version: 0.274.0(svelte@4.2.0)
+    specifier: ^0.265.0
+    version: 0.265.0(svelte@4.2.0)
   mdsvex:
     specifier: ^0.11.0
     version: 0.11.0(svelte@4.2.0)
@@ -2216,8 +2216,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-svelte@0.274.0(svelte@4.2.0):
-    resolution: {integrity: sha512-+8bKZyOdadiaksrGOftNRfz52PMcddSmNDd1invTrqLTaAg00mrVrHuh6hHypFCpQhZLKrsEHqHl/TwITe/VsA==}
+  /lucide-svelte@0.265.0(svelte@4.2.0):
+    resolution: {integrity: sha512-rmIcnkvVxCA4xcxsUJ1AVSn3nuowdjgvK0wmdfBqNAaRmvCGqqPekpZMKBOlYLPzWLzwzGwG5A5J9nj9GH3TrQ==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
