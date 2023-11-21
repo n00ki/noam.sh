@@ -51,6 +51,7 @@
 		"zod": "^3.22.2"
 	},
 	"dependencies": {
+		"fathom-client": "^3.6.0",
 		"svelte-email": "^0.0.4"
 	}
 }

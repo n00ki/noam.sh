@@ -11,8 +11,16 @@
 	import ThemeSwitcher from '$components/ThemeSwitcher.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
+	// Fathom Analytics
+	import * as Fathom from 'fathom-client';
+	onMount(() => {
+		Fathom.load('CSZUFTWO');
+	});
+	$: $page.url.pathname, browser && Fathom.trackPageview();
+
 	// Styles
 	import '../styles/app.css';
+	import { onMount } from 'svelte';
 
 	if (browser) {
 		$js_enabled = true;
