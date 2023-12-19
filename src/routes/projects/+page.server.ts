@@ -20,7 +20,7 @@ export const load = async ({ url }) => {
 	});
 
 	if (filtered_projects.length === 0) {
-		throw redirect(301, '/projects');
+		redirect(301, '/projects');
 	}
 
 	return {
