@@ -57,6 +57,20 @@ const config = {
 			fontFamily: {
 				primary: ['Space Grotesk', 'sans-serif'],
 				sans: [...fontFamily.sans]
+			},
+			animation: {
+				marquee: 'marquee 25s linear infinite reverse',
+				marquee2: 'marquee2 25s linear infinite reverse'
+			},
+			keyframes: {
+				marquee: {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
+				marquee2: {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0%)' }
+				}
 			}
 		}
 	}
