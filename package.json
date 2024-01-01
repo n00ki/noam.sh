@@ -50,6 +50,7 @@
 	},
 	"dependencies": {
 		"fathom-client": "^3.6.0",
+		"motion": "^10.16.4",
 		"svelte-email": "^0.0.4"
 	}
 }

@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Nunito', 'sans-serif']
+				primary: ['Space Grotesk', 'sans-serif']
 			}
 		}
 	},
