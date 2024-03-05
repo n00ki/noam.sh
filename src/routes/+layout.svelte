@@ -23,7 +23,7 @@
 <Toaster />
 
 <main
-	class="container mx-auto max-h-screen min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"
+	class="bg-background font-primary text-foreground container mx-auto min-h-screen antialiased selection:bg-cyan-300 selection:text-cyan-900"
 >
 	<slot />
 
