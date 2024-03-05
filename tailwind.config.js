@@ -59,8 +59,8 @@ const config = {
 				sans: [...fontFamily.sans]
 			},
 			animation: {
-				marquee: 'marquee 25s linear infinite reverse',
-				marquee2: 'marquee2 25s linear infinite reverse'
+				marquee: 'marquee 50s linear infinite reverse',
+				marquee2: 'marquee2 50s linear infinite reverse'
 			},
 			keyframes: {
 				marquee: {

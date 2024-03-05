@@ -1,36 +1,33 @@
 <script lang="ts">
 	// Stores
 	import { page } from '$app/stores';
-	import { browser } from '$app/environment';
+
 	// Components
 	import SEO from '$components/SEO.svelte';
-	import Navbar from '$components/Navbar.svelte';
 	import { Toaster } from 'svelte-french-toast';
 	import ThemeSwitcher from '$components/ThemeSwitcher.svelte';
-	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	// Styles
 	import '../styles/app.css';
 
 	import * as Fathom from 'fathom-client';
+	import { onMount } from 'svelte';
 
-	if (browser) {
+	onMount(() => {
 		Fathom.load('CSZUFTWO');
-	}
-
-	$: $page.url.pathname, browser && Fathom.trackPageview();
+	});
 </script>
 
 <SEO {...$page.data.metadata} url={$page.url.href} />
 
 <Toaster />
 
-<main class="container mx-auto flex min-h-screen font-primary">
-	<PageTransition refresh={$page.url.pathname}>
-		<slot />
-	</PageTransition>
+<main
+	class="container mx-auto max-h-screen min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"
+>
+	<slot />
 
-	<div class="fixed bottom-5 right-0">
+	<div class="fixed right-5 top-5">
 		<ThemeSwitcher />
 	</div>
 </main>

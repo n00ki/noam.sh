@@ -1,1 +1,1 @@
-export const themes = { default: 'dark', light: 'light', dark: 'dark' };
+export const themes = { light: 'light', dark: 'dark' };

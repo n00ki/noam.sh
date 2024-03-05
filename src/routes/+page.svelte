@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Card from '$components/Card.svelte';
+	import Marquee from '$components/Marquee.svelte';
 	import image_png from '$lib/assets/noam.png';
 	import image_webp from '$lib/assets/noam.webp';
 	import {
@@ -9,34 +11,18 @@
 		InstagramLogo
 	} from 'radix-icons-svelte';
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	let ready = false;
 
 	onMount(() => (ready = true));
-
-	const words = [
-		'creativity',
-		'music',
-		'code',
-		'learning',
-		'design',
-		'art',
-		'thinking',
-		'technology',
-		'productivity',
-		'identity',
-		'writing',
-		'community',
-		'reading',
-		'growth',
-		'business'
-	];
 </script>
 
-<div class="mt-16 grid w-full grid-cols-2 gap-2">
+<div class="flex min-h-screen w-full flex-1 justify-between gap-2 lg:px-16">
 	{#if ready}
-		<section class="flex flex-col justify-between">
+		<header
+			class="flex flex-col justify-between lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pb-4 lg:pt-16"
+		>
 			<div>
 				<h1 transition:fly={{ y: 15 }} class="text-5xl font-extrabold">Noam Shemesh</h1>
 				<h3
@@ -75,8 +61,8 @@
 				</nav>
 			</div>
 
-			<div>
-				<span class="inline-flex w-full space-x-4 py-8 text-2xl text-muted-foreground/70">
+			<div transition:fade={{ delay: 150 }}>
+				<span class="inline-flex w-full space-x-4 text-2xl text-muted-foreground/70">
 					<a
 						href="mailto:noams@hey.com"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
@@ -116,42 +102,20 @@
 						<InstagramLogo class="h-6 w-6" />
 					</a>
 				</span>
+
+				<Marquee />
 			</div>
-		</section>
+		</header>
 	{/if}
 
-	<section>
+	<section class="flex scroll-mt-16 flex-col items-center gap-4 pt-24 lg:w-1/2 lg:py-16">
 		<!-- <picture>
 				 <source srcset={image_webp} type="image/webp" />
 				 <img src={image_png} alt="Noam" class="p-8" />
 			 </picture> -->
-
-		<article
-			class="whitespace-no-wrap group fixed bottom-0 right-0 flex -skew-y-6 select-none overflow-x-scroll text-muted-foreground opacity-25 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] motion-safe:overflow-x-hidden"
-		>
-			<div class="relative">
-				<ul class="flex group-hover:[animation-play-state:paused] motion-safe:animate-marquee">
-					{#each words as word}
-						<li
-							class="mx-6 whitespace-nowrap transition-all duration-300 ease-in-out hover:scale-125 hover:text-clip hover:bg-gradient-to-r hover:from-muted-foreground hover:to-accent-foreground hover:bg-clip-text hover:font-black hover:text-transparent hover:shadow-md"
-						>
-							{word}.
-						</li>
-					{/each}
-				</ul>
-				<ul
-					aria-hidden="true"
-					class="absolute top-0 flex group-hover:[animation-play-state:paused] motion-safe:animate-marquee2"
-				>
-					{#each words as word}
-						<li
-							class="mx-6 whitespace-nowrap transition-all duration-300 ease-in-out hover:scale-125 hover:text-clip hover:bg-gradient-to-r hover:from-muted-foreground hover:to-accent-foreground hover:bg-clip-text hover:font-black hover:text-transparent hover:shadow-md"
-						>
-							{word}.
-						</li>
-					{/each}
-				</ul>
-			</div>
-		</article>
+		{#each Array(10) as item}
+			<!-- content here -->
+			<Card />
+		{/each}
 	</section>
 </div>
