@@ -53,6 +53,7 @@
 	"dependencies": {
 		"@sendgrid/mail": "^8.1.0",
 		"fathom-client": "^3.6.0",
-		"svelte-email": "^0.0.4"
+		"svelte-email": "^0.0.4",
+		"svelte-inview": "^4.0.2"
 	}
 }

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Button } from '$components/ui/button';
-	import Card from '$components/Card.svelte';
 	import Marquee from '$components/Marquee.svelte';
 	import {
 		EnvelopeClosed,
@@ -13,15 +12,82 @@
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import ProjectsGrid from '$components/ProjectsGrid.svelte';
+	import { inview } from 'svelte-inview';
 
 	let ready = false;
+
+	let isHeroMinified = false;
+
+	function handleHeroSectionEnter() {
+		isHeroMinified = false;
+	}
+
+	function handleHeroSectionLeave() {
+		isHeroMinified = true;
+	}
 
 	onMount(() => (ready = true));
 </script>
 
 <div>
 	{#if ready}
-		<div class="grid h-screen w-full content-center justify-center">
+		{#if isHeroMinified}
+			<section
+				transition:fly={{ x: -100, duration: 500 }}
+				class="fixed left-0 top-0 z-20 flex w-full items-center justify-between bg-background p-4"
+			>
+				<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
+				<div transition:fade={{ delay: 150 }}>
+					<span class="flex w-full items-center gap-4 text-2xl text-muted-foreground/70">
+						<a
+							href="mailto:noams@hey.com"
+							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
+						>
+							<EnvelopeClosed class="size-4" />
+						</a>
+						<a
+							rel="noreferrer"
+							href="https://www.linkedin.com/in/noam-shemesh-a57931186/"
+							target="_blank"
+							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
+						>
+							<GithubLogo class="size-4" />
+						</a>
+						<a
+							rel="noreferrer"
+							href="https://twitter.com/noam__shemesh"
+							target="_blank"
+							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
+						>
+							<TwitterLogo class="size-4" />
+						</a>
+						<a
+							rel="noreferrer"
+							href="https://www.instagram.com/noamshemesh/"
+							target="_blank"
+							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
+						>
+							<LinkedinLogo class="size-4" />
+						</a>
+						<a
+							rel="noreferrer"
+							href="https://github.com/n00ki"
+							target="_blank"
+							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
+						>
+							<InstagramLogo class="size-4" />
+						</a>
+					</span>
+				</div>
+			</section>
+		{/if}
+
+		<div
+			use:inview={{ rootMargin: '-50%' }}
+			on:inview_enter={handleHeroSectionEnter}
+			on:inview_leave={handleHeroSectionLeave}
+			class="grid h-screen w-full content-center justify-center"
+		>
 			<h1 transition:fly={{ y: 15 }} class="text-3xl font-semibold">Noam Shemesh</h1>
 			<h3 transition:fly={{ y: 15, delay: 100 }} class="py-1 text-lg font-thin text-foreground/80">
 				Life Enthusiast on an Entrepreneurial Journey
@@ -101,7 +167,7 @@
 
 		<div id="projects" class="min-h-screen">
 			<div class="flex w-full justify-center py-8">
-				<Button variant="ghost" size="icon" href="#" class="rounded-full">
+				<Button variant="ghost" size="icon" href="#" class="z-50 rounded-full">
 					<ArrowUp class="size-6 text-secondary-foreground" />
 				</Button>
 			</div>
