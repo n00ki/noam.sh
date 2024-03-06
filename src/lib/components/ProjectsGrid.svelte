@@ -1,11 +1,12 @@
-<script>
-	import { Button } from '$lib/components/ui/button';
+<script lang="ts">
+	import { type Project } from '$lib/data/projects';
 	import Card from '$lib/components/Card.svelte';
-	import { ArrowUp } from 'radix-icons-svelte';
+
+	export let projects: Project[];
 </script>
 
 <section class="grid grid-cols-2 gap-2">
-	{#each Array(10) as item}
-		<Card />
+	{#each projects as project}
+		<Card {project} />
 	{/each}
 </section>

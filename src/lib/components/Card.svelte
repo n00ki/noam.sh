@@ -1,17 +1,20 @@
 <script lang="ts">
+	import type { Project } from '$lib/data/projects';
 	import { Badge } from '$lib/components/ui/badge';
 	import { ExternalLink } from 'radix-icons-svelte';
 	import fav1 from '$lib/assets/favicon1.png';
 
-	const name = 'noam';
-	const project = {
-		icon: fav1,
-		title: 'Hayde!',
-		description: 'Hayde! is a platform for creating and sharing interactive stories.',
-		role: 'DEVELOPER',
-		tech: ['tech1', 'tech2', 'tech3'],
-		link: 'https://link.com'
-	};
+	export let project: Project;
+
+	// const name = 'noam';
+	// const project = {
+	// 	icon: fav1,
+	// 	title: 'Hayde!',
+	// 	description: 'Hayde! is a platform for creating and sharing interactive stories.',
+	// 	role: 'DEVELOPER',
+	// 	tech: ['tech1', 'tech2', 'tech3'],
+	// 	link: 'https://link.com'
+	// };
 </script>
 
 <div
@@ -40,9 +43,11 @@
 		</div>
 	</div>
 	<p class="py-2 text-sm font-extralight">{project.description}</p>
-	<div class="flex flex-wrap gap-1 py-2">
-		{#each project.tech as item}
-			<Badge variant="default">{item}</Badge>
-		{/each}
-	</div>
+	{#if project.tags}
+		<div class="flex flex-wrap gap-1 py-2">
+			{#each project.tags as tag}
+				<Badge variant="default">{tag}</Badge>
+			{/each}
+		</div>
+	{/if}
 </div>

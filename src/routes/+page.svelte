@@ -14,6 +14,7 @@
 	import ProjectsGrid from '$components/ProjectsGrid.svelte';
 	import { inview } from 'svelte-inview';
 
+	export let data;
 	let ready = false;
 
 	let isHeroMinified = false;
@@ -34,51 +35,12 @@
 		{#if isHeroMinified}
 			<section
 				transition:fly={{ x: -100, duration: 500 }}
-				class="fixed left-0 top-0 z-20 flex w-full items-center justify-between bg-background p-4"
+				class="fixed left-0 top-0 w-full bg-background p-4"
 			>
-				<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
-				<div transition:fade={{ delay: 150 }}>
-					<span class="flex w-full items-center gap-4 text-2xl text-muted-foreground/70">
-						<a
-							href="mailto:noams@hey.com"
-							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
-						>
-							<EnvelopeClosed class="size-4" />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://www.linkedin.com/in/noam-shemesh-a57931186/"
-							target="_blank"
-							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
-						>
-							<GithubLogo class="size-4" />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://twitter.com/noam__shemesh"
-							target="_blank"
-							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
-						>
-							<TwitterLogo class="size-4" />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://www.instagram.com/noamshemesh/"
-							target="_blank"
-							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
-						>
-							<LinkedinLogo class="size-4" />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://github.com/n00ki"
-							target="_blank"
-							class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
-						>
-							<InstagramLogo class="size-4" />
-						</a>
-					</span>
-				</div>
+				<Button variant="ghost" href="#" class="z-50 rounded-full">
+					<ArrowUp class="size-5 text-secondary-foreground" />
+					<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
+				</Button>
 			</section>
 		{/if}
 
@@ -127,7 +89,7 @@
 						href="mailto:noams@hey.com"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<EnvelopeClosed class="size-4" />
+						<EnvelopeClosed class="size-5" />
 					</a>
 					<a
 						rel="noreferrer"
@@ -135,7 +97,7 @@
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<GithubLogo class="size-4" />
+						<GithubLogo class="size-5" />
 					</a>
 					<a
 						rel="noreferrer"
@@ -143,7 +105,7 @@
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<TwitterLogo class="size-4" />
+						<TwitterLogo class="size-5" />
 					</a>
 					<a
 						rel="noreferrer"
@@ -151,7 +113,7 @@
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<LinkedinLogo class="size-4" />
+						<LinkedinLogo class="size-5" />
 					</a>
 					<a
 						rel="noreferrer"
@@ -159,19 +121,14 @@
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<InstagramLogo class="size-4" />
+						<InstagramLogo class="size-5" />
 					</a>
 				</span>
 			</div>
 		</div>
 
-		<div id="projects" class="min-h-screen">
-			<div class="flex w-full justify-center py-8">
-				<Button variant="ghost" size="icon" href="#" class="z-50 rounded-full">
-					<ArrowUp class="size-6 text-secondary-foreground" />
-				</Button>
-			</div>
-			<ProjectsGrid />
+		<div id="projects" class="min-h-screen pt-16">
+			<ProjectsGrid projects={data.projects} />
 		</div>
 	{/if}
 </div>
