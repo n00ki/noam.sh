@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Utils
+	import { onMount } from 'svelte';
+	import { onNavigate, disableScrollHandling } from '$app/navigation';
+
 	// Stores
 	import { page } from '$app/stores';
 
@@ -11,10 +15,19 @@
 	import '../styles/app.css';
 
 	import * as Fathom from 'fathom-client';
-	import { onMount } from 'svelte';
 
 	onMount(() => {
 		Fathom.load('CSZUFTWO');
+	});
+
+	// Disable scroll handling on same route navigation for theme switching
+	onNavigate((navigation) => {
+		const previousRoute = navigation.from?.url.pathname;
+		const currentRoute = navigation.to?.url.pathname;
+
+		if (previousRoute === currentRoute) {
+			disableScrollHandling();
+		}
 	});
 </script>
 
@@ -23,7 +36,7 @@
 <Toaster />
 
 <main
-	class="bg-background font-primary text-foreground container mx-auto min-h-screen antialiased selection:bg-cyan-300 selection:text-cyan-900"
+	class="container mx-auto min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"
 >
 	<slot />
 
