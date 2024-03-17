@@ -7,7 +7,8 @@
 		TwitterLogo,
 		LinkedinLogo,
 		InstagramLogo,
-		ArrowUp
+		ArrowUp,
+		ExternalLink
 	} from 'svelte-radix';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -72,14 +73,16 @@
 					>
 				</a>
 
-				<a href="#blog" class="group inline-flex items-center gap-2">
+				<a href="https://noams.blog" target="_blank" class="group inline-flex items-center gap-2">
 					<div
 						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
 					/>
 					<span
 						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
-						>BLOG</span
 					>
+						BLOG
+					</span>
+					<ExternalLink size={16} />
 				</a>
 			</nav>
 
@@ -93,7 +96,7 @@
 					</a>
 					<a
 						rel="noreferrer"
-						href="https://www.linkedin.com/in/noam-shemesh-a57931186/"
+						href="https://github.com/n00ki"
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
@@ -109,7 +112,7 @@
 					</a>
 					<a
 						rel="noreferrer"
-						href="https://www.instagram.com/noamshemesh/"
+						href="https://www.linkedin.com/in/noam-shemesh-a57931186/"
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
@@ -117,7 +120,7 @@
 					</a>
 					<a
 						rel="noreferrer"
-						href="https://github.com/n00ki"
+						href="https://www.instagram.com/noamshemesh/"
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
