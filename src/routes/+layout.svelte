@@ -8,7 +8,6 @@
 
 	// Components
 	import SEO from '$components/SEO.svelte';
-	import { Toaster } from 'svelte-french-toast';
 	import ThemeSwitcher from '$components/ThemeSwitcher.svelte';
 
 	// Styles
@@ -32,8 +31,6 @@
 </script>
 
 <SEO {...$page.data.metadata} url={$page.url.href} />
-
-<Toaster />
 
 <main
 	class="container mx-auto min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"
