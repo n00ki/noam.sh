@@ -8,7 +8,7 @@
 		LinkedinLogo,
 		InstagramLogo,
 		ArrowUp
-	} from 'radix-icons-svelte';
+	} from 'svelte-radix';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import ProjectsGrid from '$components/ProjectsGrid.svelte';

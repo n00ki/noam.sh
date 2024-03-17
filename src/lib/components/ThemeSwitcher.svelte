@@ -12,7 +12,8 @@
 	import { Button } from '$components/ui/button';
 
 	// Icons
-	import { Sun, Moon } from 'radix-icons-svelte';
+	import Sun from 'svelte-radix/Sun.svelte';
+	import Moon from 'svelte-radix/Moon.svelte';
 
 	let preferredTheme: string = $page.data.theme;
 
@@ -47,7 +48,7 @@
 				size="icon"
 				class="rounded-full"
 			>
-				<Sun />
+				<Sun size={16} />
 			</Button>
 		{:else}
 			<Button
@@ -59,7 +60,7 @@
 				size="icon"
 				class="rounded-full"
 			>
-				<Moon />
+				<Moon size={16} />
 			</Button>
 		{/if}
 	{/if}

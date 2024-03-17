@@ -1,8 +1,10 @@
 <script lang="ts">
 	import type { Project } from '$lib/data/projects';
 	import { Badge } from '$lib/components/ui/badge';
-	import { ExternalLink } from 'radix-icons-svelte';
 	import fav1 from '$lib/assets/favicon1.png';
+
+	// Icons
+	import ExternalLink from 'svelte-radix/ExternalLink.svelte';
 
 	export let project: Project;
 
@@ -28,7 +30,7 @@
 				>
 					{project.title}
 				</h3>
-				<ExternalLink />
+				<ExternalLink size={16} />
 			</span>
 			<h4 class="text-xs font-light uppercase tracking-widest text-muted-foreground">
 				{project.role}
