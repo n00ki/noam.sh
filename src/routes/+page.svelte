@@ -11,7 +11,7 @@
 	} from 'svelte-radix';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
-	import ProjectsGrid from '$components/ProjectsGrid.svelte';
+	import Grid from '$components/project/Grid.svelte';
 	import { inview } from 'svelte-inview';
 
 	export let data;
@@ -128,7 +128,7 @@
 		</div>
 
 		<div id="projects" class="min-h-screen pt-16">
-			<ProjectsGrid projects={data.projects} />
+			<Grid projects={data.projects} />
 		</div>
 	{/if}
 </div>

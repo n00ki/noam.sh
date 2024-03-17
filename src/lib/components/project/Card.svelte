@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/data/projects';
-	import { Badge } from '$lib/components/ui/badge';
+	import { Badge } from '$components/ui/badge';
 	import fav1 from '$lib/assets/favicon1.png';
 
 	// Icons
