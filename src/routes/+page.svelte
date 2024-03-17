@@ -133,6 +133,6 @@
 	{/if}
 </div>
 
-<div class="fixed bottom-0 left-0">
+<div class="fixed bottom-0 left-0 hidden w-full md:block">
 	<Marquee />
 </div>
