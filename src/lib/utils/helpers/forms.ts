@@ -1,5 +1,4 @@
-import type { NumericRange } from 'sveltekit-superforms/dist/utils';
-import { fail } from '@sveltejs/kit';
+import { fail, type NumericRange } from '@sveltejs/kit';
 import { setError, setMessage } from 'sveltekit-superforms/server';
 
 export const form_fail = (

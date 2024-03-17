@@ -29,7 +29,6 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.33",
 		"postcss-load-config": "^5.0.2",
 		"prettier": "^3.1.1",
@@ -51,9 +50,7 @@
 		"zod": "^3.22.4"
 	},
 	"dependencies": {
-		"@sendgrid/mail": "^8.1.0",
 		"fathom-client": "^3.6.0",
-		"svelte-email": "^0.0.4",
 		"svelte-inview": "^4.0.2"
 	}
 }
