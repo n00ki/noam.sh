@@ -5,6 +5,7 @@ import bokerFavicon from '$lib/assets/favicons/boker.png';
 import personalWebsiteFavicon from '$lib/assets/favicons/noamshemesh.png';
 import daliasFavicon from '$lib/assets/favicons/dalias.png';
 import ninetyPercentFavicon from '$lib/assets/favicons/90.png';
+import theFilipinoFavicon from '$lib/assets/favicons/filipino.png';
 
 export type Project = {
 	title: string;
@@ -30,7 +31,7 @@ export const projects: Project[] = [
 	{
 		title: 'Snippetry',
 		description:
-			"Snippetry is a platform that aims to make it easier for independent musicians to find and collaborate with other musicians. It's a place where musicians can share their music and find other musicians to collaborate with",
+			'Snippetry is a fun little brain training game. level up your cognitive muscles by transforming famous quotes into code and share it with everyone',
 		icon: snippetryFavicon,
 		role: 'Developer',
 		link: 'https://snippetry.com',
@@ -40,7 +41,7 @@ export const projects: Project[] = [
 	{
 		title: 'Kickoff SvelteKit',
 		description:
-			'an open source template for kickstarting SvelteKit projects with pre-configured authentication out of the box and a few other goodies',
+			'an open source template for kickstarting SvelteKit projects with pre-configured authentication and a few other goodies out of the box',
 		icon: ksFavicon,
 		role: 'Creator & Maintainer',
 		link: 'https://github.com/n00ki/kickoff-sveltekit',
@@ -50,22 +51,21 @@ export const projects: Project[] = [
 	{
 		title: 'boker.app',
 		description:
-			'a platform that aims to make it easier for independent musicians to find and book gigs. It is a place where musicians can find venues and book gigs',
+			"a digital notebook for morning pages, a stream-of-consciousness writing practice developed by Julia Cameron (author of The Artist's Way). currently built in hebrew for my local community",
 		icon: bokerFavicon,
 		role: 'Developer',
 		link: 'https://boker.app',
 		type: 'dev',
-		tags: ['sveltekit', 'tailwindcss', 'supabase', 'cloudinary', 'vercel']
+		tags: ['sveltekit', 'typescript', 'tailwindcss', 'vercel', 'railway']
 	},
 	{
 		title: 'Personal Website',
-		description:
-			'An independent musician, songwriter, producer and a developer. I am passionate about creating music and building digital products',
+		description: 'My personal website, which you are currently visiting',
 		icon: personalWebsiteFavicon,
 		role: 'Developer',
 		link: 'https://noam.sh',
 		type: 'dev',
-		tags: ['web development', 'sveltekit', 'tailwindcss', 'supabase', 'cloudinary', 'vercel']
+		tags: ['web development', 'sveltekit', 'tailwindcss', 'vercel']
 	},
 	{
 		title: "DALIA'S Collective",
@@ -79,11 +79,20 @@ export const projects: Project[] = [
 	{
 		title: '90%',
 		description:
-			'90% is a music project that I started with my friend, Eran. We write, produce and perform our own music',
+			'Naama Guggenheim’s debut album, released in 2021. "A lifetime of questioning, and only one conclusion. The imperfect is Perfect. The broken is whole. 90% is actually 100%"',
 		link: 'https://open.spotify.com/album/14Sknxi0kQfcaQwvThTVWP?si=HpvxpkFURM6hd74tRkKfbw',
 		icon: ninetyPercentFavicon,
 		role: 'Music Producer & Sound Engineer',
 		type: 'non-curricular',
-		tags: ['non curricular', 'music', 'events']
+		tags: ['non curricular', 'music', 'sound engineering', 'production']
+	},
+	{
+		title: 'The Filipino (הפיליפינית)',
+		description: "Yakir Aharon's second single, released in 2020",
+		link: 'https://open.spotify.com/track/2fEa0e1ho8jjUzGwAcsBqY?si=3da1e575833d487e',
+		icon: theFilipinoFavicon,
+		role: 'Music Producer & Sound Engineer',
+		type: 'non-curricular',
+		tags: ['non curricular', 'music', 'sound engineering', 'production']
 	}
 ];
