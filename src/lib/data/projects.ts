@@ -73,7 +73,7 @@ export const projects: Project[] = [
 			"DALIA'S Collective aimed to assist promising talents and bridge the gap between local musicians and relevant audiences, focusing on creating meaningful content and establishing creative performing environments",
 		icon: daliasFavicon,
 		role: 'Co-Founder & Member',
-		type: 'non-curricular',
+		type: 'community',
 		tags: ['non curricular', 'community', 'music', 'events']
 	},
 	{
@@ -83,7 +83,7 @@ export const projects: Project[] = [
 		link: 'https://open.spotify.com/album/14Sknxi0kQfcaQwvThTVWP?si=HpvxpkFURM6hd74tRkKfbw',
 		icon: ninetyPercentFavicon,
 		role: 'Music Producer & Sound Engineer',
-		type: 'non-curricular',
+		type: 'music',
 		tags: ['non curricular', 'music', 'sound engineering', 'production']
 	},
 	{
@@ -92,7 +92,7 @@ export const projects: Project[] = [
 		link: 'https://open.spotify.com/track/2fEa0e1ho8jjUzGwAcsBqY?si=3da1e575833d487e',
 		icon: theFilipinoFavicon,
 		role: 'Music Producer & Sound Engineer',
-		type: 'non-curricular',
+		type: 'music',
 		tags: ['non curricular', 'music', 'sound engineering', 'production']
 	}
 ];

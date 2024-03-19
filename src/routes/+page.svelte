@@ -1,6 +1,16 @@
 <script lang="ts">
+	// Utils
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
+	import { inview } from 'svelte-inview';
+
+	// Components
 	import { Button } from '$components/ui/button';
 	import Marquee from '$components/Marquee.svelte';
+	import Grid from '$components/project/Grid.svelte';
+	import Now from '$components/Now.svelte';
+
+	// Icons
 	import {
 		EnvelopeClosed,
 		GithubLogo,
@@ -10,10 +20,6 @@
 		ArrowUp,
 		ExternalLink
 	} from 'svelte-radix';
-	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
-	import Grid from '$components/project/Grid.svelte';
-	import { inview } from 'svelte-inview';
 
 	export let data;
 	let ready = false;
@@ -70,6 +76,16 @@
 					<span
 						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
 						>PROJECTS</span
+					>
+				</a>
+
+				<a href="#now" class="group inline-flex items-center gap-2">
+					<div
+						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
+					/>
+					<span
+						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
+						>NOW</span
 					>
 				</a>
 
@@ -132,6 +148,10 @@
 
 		<div id="projects" class="min-h-screen pt-16">
 			<Grid projects={data.projects} />
+		</div>
+
+		<div id="now" class="flex min-h-screen items-center pt-16 md:justify-center">
+			<Now />
 		</div>
 	{/if}
 </div>

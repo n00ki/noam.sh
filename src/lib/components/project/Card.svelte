@@ -4,6 +4,9 @@
 
 	// Icons
 	import ExternalLink from 'svelte-radix/ExternalLink.svelte';
+	import MusicalNote from '$lib/assets/icons/MusicalNote.svelte';
+	import CodeBracket from '$lib/assets/icons/CodeBracket.svelte';
+	import Users from '$lib/assets/icons/Users.svelte';
 
 	export let project: Project;
 </script>
@@ -26,9 +29,20 @@
 						<ExternalLink size={16} />
 					{/if}
 				</span>
-				<h4 class="text-xs font-light uppercase tracking-widest text-muted-foreground">
-					{project.role}
-				</h4>
+				<span class="flex items-center gap-2">
+					{#if project.type === 'dev'}
+						<CodeBracket />
+					{/if}
+					{#if project.type === 'music'}
+						<MusicalNote />
+					{/if}
+					{#if project.type === 'community'}
+						<Users />
+					{/if}
+					<h4 class="text-xs font-light uppercase tracking-widest text-muted-foreground">
+						{project.role}
+					</h4>
+				</span>
 			</div>
 			<div class="overflow-hidden rounded-lg">
 				<img
