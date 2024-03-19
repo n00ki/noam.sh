@@ -1,9 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { projects } from '$lib/data/projects';
 
-// export const prerender = true;
-// export const ssr = false;
-
 export const load = async ({ url }) => {
 	const filter = url.searchParams.get('filter');
 
