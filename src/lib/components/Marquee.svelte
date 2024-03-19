@@ -21,7 +21,7 @@
 <article
 	id="marquee"
 	aria-label="marquee"
-	class="group -z-10 flex select-none overflow-x-scroll text-muted-foreground opacity-25 [mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)] motion-safe:overflow-x-hidden"
+	class="group -z-50 flex select-none overflow-x-scroll text-muted-foreground opacity-25 [mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)] motion-safe:overflow-x-hidden"
 >
 	<div class="relative">
 		<ul

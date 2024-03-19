@@ -8,7 +8,6 @@
 	import { Button } from '$components/ui/button';
 	import Marquee from '$components/Marquee.svelte';
 	import Grid from '$components/project/Grid.svelte';
-	import Now from '$components/Now.svelte';
 
 	// Icons
 	import {
@@ -79,16 +78,6 @@
 					>
 				</a>
 
-				<a href="#now" class="group inline-flex items-center gap-2">
-					<div
-						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
-					/>
-					<span
-						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
-						>NOW</span
-					>
-				</a>
-
 				<a href="https://noams.blog" target="_blank" class="group inline-flex items-center gap-2">
 					<div
 						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
@@ -149,13 +138,9 @@
 		<div id="projects" class="min-h-screen pt-16">
 			<Grid projects={data.projects} />
 		</div>
-
-		<div id="now" class="flex min-h-screen items-center pt-16 md:justify-center">
-			<Now />
-		</div>
 	{/if}
 </div>
 
-<div class="fixed bottom-0 left-0 hidden w-full md:block">
+<div class="absolute bottom-0 left-0 hidden w-full md:block">
 	<Marquee />
 </div>
