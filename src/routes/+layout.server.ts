@@ -8,7 +8,10 @@ export const load = async (event) => {
 			event: 'New Visit',
 			description: `New visit from ${ip}`,
 			icon: '👀',
-			notify: true
+			notify: true,
+			tags: {
+				ip: ip
+			}
 		});
 	} catch (error) {
 		console.log(error);
