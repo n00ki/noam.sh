@@ -34,8 +34,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={metaSquare} />
-	<meta property="og:locale" content="he_IL" />
-	<meta property="og:language" content="he" />
+	<meta property="og:locale" content="en_US" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
