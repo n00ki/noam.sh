@@ -15,7 +15,7 @@
 
 	import * as Fathom from 'fathom-client';
 
-	onMount(() => {
+	onMount(async () => {
 		Fathom.load('CSZUFTWO');
 	});
 

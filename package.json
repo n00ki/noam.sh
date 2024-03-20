@@ -49,6 +49,7 @@
 	},
 	"dependencies": {
 		"fathom-client": "^3.6.0",
+		"logsnag": "^1.0.0",
 		"svelte-inview": "^4.0.2"
 	}
 }
