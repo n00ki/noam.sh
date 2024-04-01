@@ -41,9 +41,9 @@
 		{#if isHeroMinified}
 			<section
 				transition:fly={{ x: -100, duration: 500 }}
-				class="fixed left-0 top-0 w-full bg-background p-4"
+				class="fixed left-0 top-0 z-50 w-full bg-background p-4"
 			>
-				<Button variant="ghost" href="#" class="z-50 rounded-full">
+				<Button variant="ghost" href="#" class="rounded-full">
 					<ArrowUp class="size-5 text-secondary-foreground" />
 					<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
 				</Button>

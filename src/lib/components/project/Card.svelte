@@ -44,11 +44,11 @@
 					</h4>
 				</span>
 			</div>
-			<div class="overflow-hidden rounded-lg">
+			<div class="p-0.5">
 				<img
 					src={project.icon}
 					alt="{project.title} icon"
-					class="h-6 w-6 object-fill opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-90"
+					class="size-6 rounded-lg opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-90"
 				/>
 			</div>
 		</div>
