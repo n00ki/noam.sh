@@ -1,6 +1,6 @@
 import haydeFavicon from '$lib/assets/favicons/hayde.png';
 import snippetryFavicon from '$lib/assets/favicons/snippetry.png';
-import ksFavicon from '$lib/assets/favicons/ks.png';
+import skoFavicon from '$lib/assets/favicons/omakase.png';
 import bokerFavicon from '$lib/assets/favicons/boker.png';
 import personalWebsiteFavicon from '$lib/assets/favicons/noamshemesh.png';
 import daliasFavicon from '$lib/assets/favicons/dalias.png';
@@ -39,12 +39,12 @@ export const projects: Project[] = [
 		tags: ['sveltekit', 'tailwindcss', 'supabase', 'cloudinary', 'vercel']
 	},
 	{
-		title: 'Kickoff SvelteKit',
+		title: 'SvelteKit Omakase',
 		description:
 			'an open source template for kickstarting SvelteKit projects with pre-configured authentication and a few other goodies out of the box',
-		icon: ksFavicon,
+		icon: skoFavicon,
 		role: 'Creator & Maintainer',
-		link: 'https://github.com/n00ki/kickoff-sveltekit',
+		link: 'https://github.com/n00ki/sveltekit-omakase',
 		type: 'dev',
 		tags: ['sveltekit', 'tailwindcss', 'typescript', 'vercel']
 	},
