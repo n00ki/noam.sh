@@ -1,6 +1,6 @@
 {
 	"type": "module",
-	"name": "noamshemsh.com",
+	"name": "noam.sh",
 	"version": "2.0.0",
 	"scripts": {
 		"dev": "vite dev",

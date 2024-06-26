@@ -1,1 +1,1 @@
-# [noamshemesh.com](https://noamshemesh.com)
+# [noam.sh](https://noam.sh)
