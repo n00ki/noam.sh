@@ -8,14 +8,15 @@
 	export let url: string;
 
 	const metaWide =
-		'https://res.cloudinary.com/nshemesh/image/upload/v1710746827/noam.sh/meta_wide.png';
+		'https://res.cloudinary.com/nshemesh/image/upload/v1710746827/noamshemesh.com/meta_wide.png';
 	const metaSquare =
-		'https://res.cloudinary.com/nshemesh/image/upload/v1710746830/noam.sh/meta_square.png';
+		'https://res.cloudinary.com/nshemesh/image/upload/v1710746830/noamshemesh.com/meta_square.png';
 
 	$: title = title ? `${title} | Noam Shemesh` : 'Noam Shemesh';
 	$: description = description ?? 'Life Enthusiast on an Entrepreneurial Journey';
 	$: image =
-		image ?? 'https://res.cloudinary.com/nshemesh/image/upload/v1636022984/noam.sh/noamshemesh.png';
+		image ??
+		'https://res.cloudinary.com/nshemesh/image/upload/v1636022984/noamshemesh.com/noamshemesh.png';
 	$: url = url ?? PUBLIC_BASE_URL;
 </script>
 
