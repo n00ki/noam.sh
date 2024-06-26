@@ -24,7 +24,7 @@ export const projects: Project[] = [
 			'a nonprofit, community driven platform modestly aspiring to equip modern day independent musicians with a set of essential digital tools to support their music distribution and promotion journeys',
 		icon: haydeFavicon,
 		role: 'Developer',
-		link: 'https://hayde.net',
+		link: 'https://hayde.link',
 		type: 'dev',
 		tags: ['sveltekit', 'tailwindcss', 'vercel']
 	},
