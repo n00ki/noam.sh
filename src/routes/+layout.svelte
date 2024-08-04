@@ -4,6 +4,7 @@
 	import { onNavigate, disableScrollHandling } from '$app/navigation';
 
 	// Stores
+	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 
 	// Components
@@ -12,12 +13,6 @@
 
 	// Styles
 	import '../styles/app.css';
-
-	import * as Fathom from 'fathom-client';
-
-	onMount(async () => {
-		Fathom.load('CSZUFTWO');
-	});
 
 	// Disable scroll handling on same route navigation for theme switching
 	onNavigate((navigation) => {
@@ -29,6 +24,12 @@
 		}
 	});
 </script>
+
+<svelte:head>
+	{#if !dev}
+		<script defer data-domain="noam.sh" src="https://plausible.io/js/script.js"></script>
+	{/if}
+</svelte:head>
 
 <SEO {...$page.data.metadata} url={$page.url.href} />
 
