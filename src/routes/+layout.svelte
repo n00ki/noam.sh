@@ -1,6 +1,5 @@
 <script lang="ts">
 	// Utils
-	import { onMount } from 'svelte';
 	import { onNavigate, disableScrollHandling } from '$app/navigation';
 
 	// Stores
@@ -38,7 +37,7 @@
 >
 	<slot />
 
-	<div class="fixed right-5 top-5 z-50">
+	<div class="fixed right-0 top-0 z-50">
 		<ThemeSwitcher />
 	</div>
 </main>

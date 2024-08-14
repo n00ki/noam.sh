@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Project } from '$lib/data/projects';
-	import { Badge } from '$components/ui/badge';
 
 	// Icons
 	import ExternalLink from 'svelte-radix/ExternalLink.svelte';
@@ -53,12 +52,5 @@
 			</div>
 		</div>
 		<p class="py-2 text-sm font-extralight">{project.description}</p>
-		<!-- {#if project.tags}
-			<div class="flex flex-wrap gap-1 py-2">
-				{#each project.tags as tag}
-					<Badge variant="default">{tag}</Badge>
-				{/each}
-			</div>
-		{/if} -->
 	</div>
 </a>
