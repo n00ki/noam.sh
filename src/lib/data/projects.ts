@@ -21,7 +21,7 @@ export const projects: Project[] = [
 	{
 		title: 'Hayde!',
 		description:
-			'a nonprofit, community driven platform modestly aspiring to equip modern day independent musicians with a set of essential digital tools to support their music distribution and promotion journeys',
+			'Where Your Music Meets the World! 🎺 Hayde! is a non-profit platform offering a suite of powerful tools to help independent artists and labels create and manage stunning landing pages for their releases. Promote your music, engage with followers, and amplify your reach—all in one place. Completely free, forever.',
 		icon: haydeFavicon,
 		role: 'Developer',
 		link: 'https://hayde.link',
