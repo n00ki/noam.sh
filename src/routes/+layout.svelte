@@ -1,6 +1,7 @@
 <script lang="ts">
 	// Utils
 	import { onNavigate, disableScrollHandling } from '$app/navigation';
+	import { ModeWatcher } from 'mode-watcher';
 
 	// Stores
 	import { dev } from '$app/environment';
@@ -31,6 +32,8 @@
 </svelte:head>
 
 <SEO {...$page.data.metadata} url={$page.url.href} />
+
+<ModeWatcher />
 
 <main
 	class="container mx-auto min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"

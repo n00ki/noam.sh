@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="%theme%">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
@@ -11,27 +11,6 @@
 			crossorigin
 		/>
 		<meta name="viewport" content="width=device-width" />
-
-		<script type="module">
-			const theme = localStorage.getItem('theme');
-			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-			const setSystemTheme = (prefersDark) => {
-				if (!theme) {
-					document.documentElement.setAttribute('class', prefersDark ? 'dark' : 'light');
-				} else {
-					document.documentElement.setAttribute('class', theme);
-				}
-			};
-
-			setSystemTheme(prefersDark.matches);
-
-			if (!theme) {
-				prefersDark.addEventListener('change', (e) => setSystemTheme(e.matches));
-			} else {
-				prefersDark.removeEventListener('change', (e) => setSystemTheme(e.matches));
-			}
-		</script>
 
 		%sveltekit.head%
 	</head>
