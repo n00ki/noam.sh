@@ -74,7 +74,7 @@
 				<a href="#projects" class="group inline-flex items-center gap-2">
 					<div
 						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
-					/>
+					></div>
 					<span
 						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
 						>PROJECTS</span
@@ -84,7 +84,7 @@
 				<a href="https://noams.blog" target="_blank" class="group inline-flex items-center gap-2">
 					<div
 						class="h-[2px] w-8 bg-primary transition-all duration-300 ease-in-out group-hover:w-12"
-					/>
+					></div>
 					<span
 						class="text-base font-medium tracking-wide transition-all duration-300 ease-in-out group-hover:tracking-wider"
 					>
