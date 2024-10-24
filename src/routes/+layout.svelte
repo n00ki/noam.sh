@@ -1,6 +1,5 @@
 <script lang="ts">
 	// Utils
-	import { onNavigate, disableScrollHandling } from '$app/navigation';
 	import { ModeWatcher } from 'mode-watcher';
 
 	// Stores
@@ -14,15 +13,11 @@
 	// Styles
 	import '../styles/app.css';
 
-	// Disable scroll handling on same route navigation for theme switching
-	onNavigate((navigation) => {
-		const previousRoute = navigation.from?.url.pathname;
-		const currentRoute = navigation.to?.url.pathname;
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-		if (previousRoute === currentRoute) {
-			disableScrollHandling();
-		}
-	});
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -38,7 +33,7 @@
 <main
 	class="container mx-auto min-h-screen bg-background font-primary text-foreground antialiased selection:bg-cyan-300 selection:text-cyan-900"
 >
-	<slot />
+	{@render children?.()}
 
 	<div class="fixed right-0 top-0 z-50">
 		<ThemeSwitcher />

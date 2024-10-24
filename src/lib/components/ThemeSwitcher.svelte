@@ -7,7 +7,7 @@
 	<button
 		id="theme-switcher"
 		aria-label="Switch themes"
-		on:click={toggleMode}
+		onclick={toggleMode}
 		class="flex items-center justify-center p-4"
 	>
 		{#if $mode === 'dark'}

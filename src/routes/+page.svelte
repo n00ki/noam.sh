@@ -19,10 +19,10 @@
 		ExternalLink
 	} from 'svelte-radix';
 
-	export let data;
-	let ready = false;
+	let { data } = $props();
 
-	let isHeroMinified = false;
+	let ready = $state(false);
+	let isHeroMinified = $state(false);
 
 	function handleHeroSectionEnter() {
 		isHeroMinified = false;
@@ -45,7 +45,7 @@
 				<button
 					class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
 				>
-					<a href="#top" class="inline-flex items-center justify-center">
+					<a href="/" class="inline-flex items-center justify-center">
 						<ArrowUp class="size-5 text-secondary-foreground" />
 						<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
 					</a>
@@ -55,8 +55,8 @@
 
 		<div
 			use:inview={{ rootMargin: '-50%' }}
-			on:inview_enter={handleHeroSectionEnter}
-			on:inview_leave={handleHeroSectionLeave}
+			oninview_enter={handleHeroSectionEnter}
+			oninview_leave={handleHeroSectionLeave}
 			class="grid h-screen w-full content-center justify-center"
 		>
 			<h1 transition:fly={{ y: 15 }} class="text-3xl font-semibold">Noam Shemesh</h1>

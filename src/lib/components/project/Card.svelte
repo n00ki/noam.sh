@@ -7,7 +7,11 @@
 	import CodeBracket from '$lib/assets/icons/CodeBracket.svelte';
 	import Users from '$lib/assets/icons/Users.svelte';
 
-	export let project: Project;
+	interface Props {
+		project: Project;
+	}
+
+	let { project }: Props = $props();
 </script>
 
 <a href={project.link ?? '#projects'} target={project.link ? '_blank' : '_self'}>

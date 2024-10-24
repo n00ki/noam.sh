@@ -2,22 +2,28 @@
 	// Env Variables
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
-	export let title: string;
-	export let description: string;
-	export let image: string;
-	export let url: string;
+	interface Props {
+		title?: string;
+		description?: string;
+		image?: string;
+		url?: string;
+	}
+
+	let { title, description, image, url }: Props = $props();
 
 	const metaWide =
 		'https://res.cloudinary.com/nshemesh/image/upload/v1710746827/noamshemesh.com/meta_wide.png';
 	const metaSquare =
 		'https://res.cloudinary.com/nshemesh/image/upload/v1710746830/noamshemesh.com/meta_square.png';
 
-	$: title = title ? `${title} | Noam Shemesh` : 'Noam Shemesh';
-	$: description = description ?? 'Life Enthusiast on an Entrepreneurial Journey';
-	$: image =
-		image ??
-		'https://res.cloudinary.com/nshemesh/image/upload/v1636022984/noamshemesh.com/noamshemesh.png';
-	$: url = url ?? PUBLIC_BASE_URL;
+	$effect(() => {
+		title = title ? `${title} | Noam Shemesh` : 'Noam Shemesh';
+		description = description ?? 'Life Enthusiast on an Entrepreneurial Journey';
+		image =
+			image ??
+			'https://res.cloudinary.com/nshemesh/image/upload/v1636022984/noamshemesh.com/noamshemesh.png';
+		url = url ?? PUBLIC_BASE_URL;
+	});
 </script>
 
 <svelte:head>
