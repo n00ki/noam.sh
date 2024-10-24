@@ -51,6 +51,6 @@
 				/>
 			</div>
 		</div>
-		<p class="py-2 text-sm font-extralight">{project.description}</p>
+		<p class="py-2 text-xs font-extralight">{project.description}</p>
 	</div>
 </a>
