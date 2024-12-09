@@ -40,14 +40,19 @@
 		{#if isHeroMinified}
 			<section
 				transition:fly={{ x: -100, duration: 500 }}
-				class="fixed left-0 top-0 z-50 w-full bg-background p-4"
+				class="fixed left-0 top-0 z-50 w-full bg-background p-4 transition-colors duration-300"
 			>
 				<button
-					class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+					class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
 				>
 					<a href="/" class="inline-flex items-center justify-center">
 						<ArrowUp class="size-5 text-secondary-foreground" />
-						<h1 transition:fly={{ y: 15 }} class="text-lg font-semibold">NS</h1>
+						<h1
+							transition:fly={{ y: 15 }}
+							class="text-lg font-semibold transition-colors duration-0"
+						>
+							NS
+						</h1>
 					</a>
 				</button>
 			</section>
