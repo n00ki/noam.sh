@@ -29,7 +29,7 @@
 						{project.title}
 					</h3>
 					{#if project.link}
-						<ExternalLink size={16} />
+						<ExternalLink size="16" />
 					{/if}
 				</span>
 				<span class="flex items-center gap-2">

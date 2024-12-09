@@ -90,7 +90,7 @@
 					>
 						BLOG
 					</span>
-					<ExternalLink size={16} />
+					<ExternalLink size="16" />
 				</a>
 			</nav>
 
