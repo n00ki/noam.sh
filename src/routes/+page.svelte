@@ -12,12 +12,12 @@
 	import {
 		EnvelopeClosed,
 		GithubLogo,
-		TwitterLogo,
 		LinkedinLogo,
 		InstagramLogo,
 		ArrowUp,
 		ExternalLink
 	} from 'svelte-radix';
+	import BlueskyLogo from '$lib/assets/icons/BlueskyLogo.svelte';
 
 	let { data } = $props();
 
@@ -117,11 +117,11 @@
 					</a>
 					<a
 						rel="noreferrer"
-						href="https://twitter.com/noam__shemesh"
+						href="https://bsky.app/profile/noam.sh"
 						target="_blank"
 						class="transition-colors duration-300 ease-in-out hover:text-muted-foreground"
 					>
-						<TwitterLogo class="size-5" />
+						<BlueskyLogo />
 					</a>
 					<a
 						rel="noreferrer"
