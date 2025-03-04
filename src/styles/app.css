@@ -1,91 +1,148 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-	/* Reference name */
-	font-family: 'Space Grotesk';
-	/* For multiple files use commas, ex: url(), url(), ... */
-	src: url('/fonts/SpaceGrotesk-VariableFont.ttf');
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/SpaceGrotesk-VariableFont.ttf');
+  }
+}
+
+:root {
+  --background: 1 0 0;
+  --foreground: 0.2 0.03 255.09;
+  --muted: 0.95 0.02 237.57;
+  --muted-foreground: 0.55 0.02 243.4;
+  --popover: 1 0 0;
+  --popover-foreground: 0.2 0.03 255.09;
+  --card: 1 0 0;
+  --card-foreground: 0.2 0.03 255.09;
+  --border: 0.91 0.02 233.81;
+  --input: 0.91 0.02 233.81;
+  --primary: 0.33 0.02 248.44;
+  --primary-foreground: 0.98 0.01 233.09;
+  --secondary: 0.95 0.02 237.57;
+  --secondary-foreground: 0.33 0.02 248.44;
+  --accent: 0.95 0.02 237.57;
+  --accent-foreground: 0.33 0.02 248.44;
+  --destructive: 0.65 0.18 29.23;
+  --destructive-foreground: 0.98 0.01 233.09;
+  --ring: 0.2 0.03 255.09;
+  --radius: 0.5rem;
+}
+.dark {
+  --background: 0.2 0.03 255.09;
+  --foreground: 0.98 0.01 233.09;
+  --muted: 0.31 0.03 260.24;
+  --muted-foreground: 0.7 0.03 242.73;
+  --popover: 0.2 0.03 255.09;
+  --popover-foreground: 0.98 0.01 233.09;
+  --card: 0.2 0.03 255.09;
+  --card-foreground: 0.98 0.01 233.09;
+  --border: 0.31 0.03 260.24;
+  --input: 0.31 0.03 260.24;
+  --primary: 0.98 0.01 233.09;
+  --primary-foreground: 0.33 0.02 248.44;
+  --secondary: 0.31 0.03 260.24;
+  --secondary-foreground: 0.98 0.01 233.09;
+  --accent: 0.31 0.03 260.24;
+  --accent-foreground: 0.98 0.01 233.09;
+  --destructive: 0.5 0.15 29.23;
+  --destructive-foreground: 0.98 0.01 233.09;
+  --ring: 0.84 0.04 233;
+}
+
+@theme inline {
+  /* Fonts */
+  --font-primary: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Colors */
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+  --color-popover: oklch(var(--popover));
+  --color-popover-foreground: oklch(var(--popover-foreground));
+  --color-card: oklch(var(--card));
+  --color-card-foreground: oklch(var(--card-foreground));
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --color-primary: oklch(var(--primary));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+  --color-secondary: oklch(var(--secondary));
+  --color-secondary-foreground: oklch(var(--secondary-foreground));
+  --color-accent: oklch(var(--accent));
+  --color-accent-foreground: oklch(var(--accent-foreground));
+  --color-destructive: oklch(var(--destructive));
+  --color-destructive-foreground: oklch(var(--destructive-foreground));
+  --color-ring: oklch(var(--ring));
+  --color-border: oklch(var(--border));
+
+  /* Border */
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animations */
+  --animate-marquee: marquee 50s linear infinite reverse;
+  --animate-marquee2: marquee2 50s linear infinite reverse;
+
+  /* Keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* For extra‑large screens (e.g. 2xl) set a max-width */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 @layer base {
-	:root {
-		--background: 0 0% 100%;
-		--foreground: 222.2 84% 4.9%;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 
-		--muted: 210 40% 96.1%;
-		--muted-foreground: 215.4 16.3% 46.9%;
+  :focus {
+    outline-color: var(--color-primary);
+  }
 
-		--popover: 0 0% 100%;
-		--popover-foreground: 222.2 84% 4.9%;
-
-		--card: 0 0% 100%;
-		--card-foreground: 222.2 84% 4.9%;
-
-		--border: 214.3 31.8% 91.4%;
-		--input: 214.3 31.8% 91.4%;
-
-		--primary: 222.2 47.4% 11.2%;
-		--primary-foreground: 210 40% 98%;
-
-		--secondary: 210 40% 96.1%;
-		--secondary-foreground: 222.2 47.4% 11.2%;
-
-		--accent: 210 40% 96.1%;
-		--accent-foreground: 222.2 47.4% 11.2%;
-
-		--destructive: 0 72.2% 50.6%;
-		--destructive-foreground: 210 40% 98%;
-
-		--ring: 222.2 84% 4.9%;
-
-		--radius: 0.5rem;
-	}
-
-	.dark {
-		--background: 222.2 84% 4.9%;
-		--foreground: 210 40% 98%;
-
-		--muted: 217.2 32.6% 17.5%;
-		--muted-foreground: 215 20.2% 65.1%;
-
-		--popover: 222.2 84% 4.9%;
-		--popover-foreground: 210 40% 98%;
-
-		--card: 222.2 84% 4.9%;
-		--card-foreground: 210 40% 98%;
-
-		--border: 217.2 32.6% 17.5%;
-		--input: 217.2 32.6% 17.5%;
-
-		--primary: 210 40% 98%;
-		--primary-foreground: 222.2 47.4% 11.2%;
-
-		--secondary: 217.2 32.6% 17.5%;
-		--secondary-foreground: 210 40% 98%;
-
-		--accent: 217.2 32.6% 17.5%;
-		--accent-foreground: 210 40% 98%;
-
-		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 210 40% 98%;
-
-		--ring: hsl(212.7, 26.8%, 83.9);
-	}
-}
-
-@layer base {
-	* {
-		@apply border-border;
-	}
-	html {
-		@apply scroll-smooth;
-	}
-	body {
-		@apply bg-background font-primary text-foreground antialiased transition-colors duration-300;
-		transition-property: background-color;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 0.3s;
-	}
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background font-primary text-foreground antialiased;
+  }
 }

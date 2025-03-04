@@ -1,14 +1,14 @@
 declare namespace App {
-	interface Locals {
-		theme: string;
-	}
+  interface Locals {
+    theme: string;
+  }
 
-	interface PageData {
-		metadata: {
-			title: string;
-			description: string;
-			image: string;
-			url: string;
-		};
-	}
+  interface PageData {
+    metadata: {
+      title: string;
+      description: string;
+      image: string;
+      url: string;
+    };
+  }
 }
