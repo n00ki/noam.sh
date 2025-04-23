@@ -4,7 +4,7 @@
 
   // Stores
   import { dev } from '$app/environment';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
 
   // Components
   import SEO from '$components/SEO.svelte';
@@ -26,7 +26,7 @@
   {/if}
 </svelte:head>
 
-<SEO {...$page.data.metadata} url={$page.url.href} />
+<SEO {...page.data.metadata} url={page.url.href} />
 
 <ModeWatcher disableTransitions={false} />
 
