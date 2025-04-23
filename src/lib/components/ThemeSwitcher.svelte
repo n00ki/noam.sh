@@ -3,14 +3,14 @@
   import { fly } from 'svelte/transition';
 </script>
 
-{#if $mode}
+{#if mode.current}
   <button
     id="theme-switcher"
     aria-label="Switch themes"
     onclick={toggleMode}
     class="flex items-center justify-center p-4"
   >
-    {#if $mode === 'dark'}
+    {#if mode.current === 'dark'}
       <div in:fly={{ y: 20, duration: 300 }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

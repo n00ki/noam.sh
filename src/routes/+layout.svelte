@@ -28,12 +28,12 @@
 
 <SEO {...$page.data.metadata} url={$page.url.href} />
 
-<ModeWatcher modeStorageKey="mode" themeStorageKey="theme" disableTransitions={false} />
+<ModeWatcher disableTransitions={false} />
 
 <main class="container mx-auto min-h-screen selection:bg-cyan-300 selection:text-cyan-900">
   {@render children?.()}
 
-  <div class="fixed right-0 top-0 z-50">
+  <div class="fixed top-0 right-0 z-50">
     <ThemeSwitcher />
   </div>
 </main>
