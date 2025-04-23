@@ -2,7 +2,6 @@ import haydeFavicon from '$lib/assets/favicons/hayde.png';
 import snippetryFavicon from '$lib/assets/favicons/snippetry.png';
 import skoFavicon from '$lib/assets/favicons/omakase.png';
 import bokerFavicon from '$lib/assets/favicons/boker.png';
-import personalWebsiteFavicon from '$lib/assets/favicons/noamshemesh.png';
 import sailkitFavicon from '$lib/assets/favicons/sailkit.png';
 import daliasFavicon from '$lib/assets/favicons/dalias.png';
 import ninetyPercentFavicon from '$lib/assets/favicons/90.png';
