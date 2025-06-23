@@ -10,13 +10,14 @@
 
   // Icons
   import {
-    EnvelopeClosed,
-    GithubLogo,
-    LinkedinLogo,
-    InstagramLogo,
+    Mail,
+    Github,
+    Linkedin,
+    Instagram,
     ArrowUp,
-    ExternalLink
-  } from 'svelte-radix';
+    SquareArrowOutUpRight
+  } from '@lucide/svelte';
+  import XLogo from '$lib/assets/icons/XLogo.svelte';
   import BlueskyLogo from '$lib/assets/icons/BlueskyLogo.svelte';
 
   let { data } = $props();
@@ -90,7 +91,7 @@
           >
             BLOG
           </span>
-          <ExternalLink size="16" />
+          <SquareArrowOutUpRight size="16" />
         </a>
       </nav>
 
@@ -100,7 +101,7 @@
             href="mailto:noams@hey.com"
             class="hover:text-muted-foreground transition-colors duration-300 ease-in-out"
           >
-            <EnvelopeClosed class="size-5" />
+            <Mail class="size-5" />
           </a>
           <a
             rel="noreferrer"
@@ -108,7 +109,15 @@
             target="_blank"
             class="hover:text-muted-foreground transition-colors duration-300 ease-in-out"
           >
-            <GithubLogo class="size-5" />
+            <Github class="size-5" />
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://x.com/n00kis"
+            target="_blank"
+            class="hover:text-muted-foreground transition-colors duration-300 ease-in-out"
+          >
+            <XLogo />
           </a>
           <a
             rel="noreferrer"
@@ -124,7 +133,7 @@
             target="_blank"
             class="hover:text-muted-foreground transition-colors duration-300 ease-in-out"
           >
-            <LinkedinLogo class="size-5" />
+            <Linkedin class="size-5" />
           </a>
           <a
             rel="noreferrer"
@@ -132,7 +141,7 @@
             target="_blank"
             class="hover:text-muted-foreground transition-colors duration-300 ease-in-out"
           >
-            <InstagramLogo class="size-5" />
+            <Instagram class="size-5" />
           </a>
         </span>
       </div>
